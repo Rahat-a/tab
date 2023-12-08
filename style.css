@@ -1,0 +1,77 @@
+.wrap{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 500px;
+    background: #c2c7d1;
+}
+.wrap input{
+    display: none;
+}
+nav label {
+	padding: 10px 20px;
+	background-color: aqua;
+	display: inline-block;
+	/* margin-right: 10px; */
+    cursor: pointer;
+}
+#home:checked ~ nav label.home{
+    background-color: #c2c7d1;
+    border: 1px solid red;
+    border-bottom: none;
+}
+#about:checked ~ nav label.about{
+    background-color: #c2c7d1;
+    border: 1px solid red;
+    border-bottom: none;
+}
+#blog:checked ~ nav label.blog{
+    background-color: #c2c7d1;
+    border: 1px solid red;
+    border-bottom: none;
+}
+#contact:checked ~ nav label.contact{
+    background-color: #c2c7d1;
+    border: 1px solid red;
+    border-bottom: none;
+}
+#home:checked ~ .content-box .content1{
+   display: block;
+   animation: anim .4s linear forwards;
+}
+#about:checked ~ .content-box .content2{
+   display: block;
+   animation: anim .4s linear forwards;
+}
+#blog:checked ~ .content-box .content3{
+   display: block;
+   animation: anim .4s linear forwards;
+}
+#contact:checked ~ .content-box .content4{
+   display: block;
+   animation: anim .4s linear forwards;
+}
+.content-box {
+    padding: 30px;
+}
+.content-box .content{
+    display: none;
+    transition: all 1s linear;
+    transform: translateX(100px);
+}
+/* .content-box .content.content2{
+    transform: translateX(100px);
+   transition: all 1s linear;
+} */
+
+@keyframes anim {
+    from{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to{
+        
+    transform: translateX(0px);
+    }
+}
